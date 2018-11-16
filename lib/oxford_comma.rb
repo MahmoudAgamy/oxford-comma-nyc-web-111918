@@ -9,11 +9,11 @@ def oxford_comma(array)
     output = ""
     array.each_with_index do |name, idx|
       if idx < array.length-1
-        output << "and #{name}"
-      else
+        output << "#{name}, "
+      elsif idx == array.length-1
         output << "and #{name}"
       end
     end
-    return array.join(", ")
+    return output
   end
 end
